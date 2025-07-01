@@ -86,8 +86,8 @@ const Settings = () => {
     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
       {/* Header */}
       <div className="mb-8">
-        <h1 className="text-3xl font-bold text-slate-900 mb-2">설정</h1>
-        <p className="text-slate-600">프로필과 면접 환경을 관리하세요</p>
+        <h1 className="text-3xl font-bold text-foreground mb-2">설정</h1>
+        <p className="text-muted-foreground">프로필과 면접 환경을 관리하세요</p>
       </div>
 
       <Tabs defaultValue="profile" className="space-y-6">
@@ -336,7 +336,7 @@ const Settings = () => {
               <div className="flex items-center justify-between">
                 <div>
                   <Label className="text-base font-medium">테마</Label>
-                  <p className="text-sm text-slate-600">화면 테마를 선택하세요</p>
+                  <p className="text-sm text-muted-foreground">화면 테마를 선택하세요</p>
                 </div>
                 <Select value={theme} onValueChange={(value: "light" | "dark" | "system" | "pink") => setTheme(value)}>
                   <SelectTrigger className="w-32">
@@ -433,23 +433,23 @@ const Settings = () => {
             <CardContent className="space-y-6">
               <div className="space-y-4">
                 <div>
-                  <h3 className="font-medium text-slate-900 mb-2">저장된 데이터</h3>
+                  <h3 className="font-medium text-foreground mb-2">저장된 데이터</h3>
                   <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
-                    <div className="p-3 bg-slate-50 rounded-lg">
-                      <div className="text-2xl font-bold text-slate-900">12</div>
-                      <div className="text-sm text-slate-600">면접 기록</div>
+                    <div className="p-3 bg-secondary rounded-lg">
+                      <div className="text-2xl font-bold text-foreground">12</div>
+                      <div className="text-sm text-muted-foreground">면접 기록</div>
                     </div>
-                    <div className="p-3 bg-slate-50 rounded-lg">
-                      <div className="text-2xl font-bold text-slate-900">47</div>
-                      <div className="text-sm text-slate-600">답변 영상</div>
+                    <div className="p-3 bg-secondary rounded-lg">
+                      <div className="text-2xl font-bold text-foreground">47</div>
+                      <div className="text-sm text-muted-foreground">답변 영상</div>
                     </div>
-                    <div className="p-3 bg-slate-50 rounded-lg">
-                      <div className="text-2xl font-bold text-slate-900">2.3GB</div>
-                      <div className="text-sm text-slate-600">사용 용량</div>
+                    <div className="p-3 bg-secondary rounded-lg">
+                      <div className="text-2xl font-bold text-foreground">2.3GB</div>
+                      <div className="text-sm text-muted-foreground">사용 용량</div>
                     </div>
-                    <div className="p-3 bg-slate-50 rounded-lg">
-                      <div className="text-2xl font-bold text-slate-900">98</div>
-                      <div className="text-sm text-slate-600">피드백 리포트</div>
+                    <div className="p-3 bg-secondary rounded-lg">
+                      <div className="text-2xl font-bold text-foreground">98</div>
+                      <div className="text-sm text-muted-foreground">피드백 리포트</div>
                     </div>
                   </div>
                 </div>

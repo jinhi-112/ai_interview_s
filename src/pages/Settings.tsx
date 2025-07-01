@@ -345,7 +345,7 @@ const Settings = () => {
                   <SelectContent>
                     <SelectItem value="light">라이트</SelectItem>
                     <SelectItem value="dark">다크</SelectItem>
-                    <SelectItem value="system">시스템</SelectItem>
+                    <SelectItem value="system">주황색</SelectItem>
                     <SelectItem value="pink">핑크</SelectItem>
                   </SelectContent>
                 </Select>

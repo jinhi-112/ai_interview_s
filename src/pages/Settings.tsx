@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -31,13 +30,13 @@ const Settings = () => {
     email: "interview@example.com",
     position: "프론트엔드 개발자",
     experience: "3-5년",
-    targetCompany: "대기업",
+    targetCompany: "네이버",
     targetSalary: "5000-7000만원"
   });
 
   const [preferences, setPreferences] = useState({
     language: "ko",
-    theme: "light",
+    theme: "dark",
     notifications: true,
     emailAlerts: false,
     weeklyReport: true,
@@ -174,18 +173,13 @@ const Settings = () => {
 
               <div className="grid md:grid-cols-2 gap-4">
                 <div>
-                  <Label htmlFor="targetCompany">목표 회사 규모</Label>
-                  <Select value={profile.targetCompany} onValueChange={(value) => setProfile({...profile, targetCompany: value})}>
-                    <SelectTrigger>
-                      <SelectValue />
-                    </SelectTrigger>
-                    <SelectContent>
-                      <SelectItem value="스타트업">스타트업</SelectItem>
-                      <SelectItem value="중견기업">중견기업</SelectItem>
-                      <SelectItem value="대기업">대기업</SelectItem>
-                      <SelectItem value="외국계기업">외국계기업</SelectItem>
-                    </SelectContent>
-                  </Select>
+                  <Label htmlFor="targetCompany">목표 회사</Label>
+                  <Input
+                    id="targetCompany"
+                    value={profile.targetCompany}
+                    onChange={(e) => setProfile({...profile, targetCompany: e.target.value})}
+                    placeholder="예: 네이버, 카카오, 삼성전자"
+                  />
                 </div>
                 <div>
                   <Label htmlFor="targetSalary">희망 연봉</Label>
@@ -347,9 +341,9 @@ const Settings = () => {
                     <SelectValue />
                   </SelectTrigger>
                   <SelectContent>
-                    <SelectItem value="light">라이트</SelectItem>
                     <SelectItem value="dark">다크</SelectItem>
-                    <SelectItem value="auto">시스템</SelectItem>
+                    <SelectItem value="system">시스템</SelectItem>
+                    <SelectItem value="pink">핑크</SelectItem>
                   </SelectContent>
                 </Select>
               </div>

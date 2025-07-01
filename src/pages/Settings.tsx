@@ -22,9 +22,12 @@ import {
   Globe
 } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import { useTheme } from "@/contexts/ThemeContext";
 
 const Settings = () => {
   const { toast } = useToast();
+  const { theme, setTheme } = useTheme();
+  
   const [profile, setProfile] = useState({
     name: "김면접자",
     email: "interview@example.com",
@@ -36,7 +39,6 @@ const Settings = () => {
 
   const [preferences, setPreferences] = useState({
     language: "ko",
-    theme: "dark",
     notifications: true,
     emailAlerts: false,
     weeklyReport: true,
@@ -336,11 +338,12 @@ const Settings = () => {
                   <Label className="text-base font-medium">테마</Label>
                   <p className="text-sm text-slate-600">화면 테마를 선택하세요</p>
                 </div>
-                <Select value={preferences.theme} onValueChange={(value) => setPreferences({...preferences, theme: value})}>
+                <Select value={theme} onValueChange={(value: "light" | "dark" | "system" | "pink") => setTheme(value)}>
                   <SelectTrigger className="w-32">
                     <SelectValue />
                   </SelectTrigger>
                   <SelectContent>
+                    <SelectItem value="light">라이트</SelectItem>
                     <SelectItem value="dark">다크</SelectItem>
                     <SelectItem value="system">시스템</SelectItem>
                     <SelectItem value="pink">핑크</SelectItem>
